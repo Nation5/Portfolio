@@ -10,8 +10,8 @@ export default function WhatsAppFloat({ t, contact }) {
       target="_blank"
       rel="noreferrer"
       aria-label={t.whatsappCta}
+      title={t.whatsappCta}
     >
-      <span className="wa-float-text">{t.whatsappFloat}</span>
       <span className="wa-float-icon"><FontAwesomeIcon icon={faWhatsapp} /></span>
     </a>
   );

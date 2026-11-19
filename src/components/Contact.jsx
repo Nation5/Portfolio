@@ -1,7 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { waLink } from "./whatsapp";
 import Reveal from "./Reveal";
 
 export default function Contact({ t, contact }) {
@@ -9,7 +7,6 @@ export default function Contact({ t, contact }) {
   const cards = [
     { key: "call", icon: faPhone, ...c.call, value: contact.phone, href: `tel:+${contact.whatsapp}` },
     { key: "email", icon: faEnvelope, ...c.email, value: contact.email, href: `mailto:${contact.email}` },
-    { key: "whatsapp", icon: faWhatsapp, ...c.whatsapp, value: contact.phone, href: waLink(contact.whatsapp, t.whatsappHello), external: true },
   ];
 
   return (

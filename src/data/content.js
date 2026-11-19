@@ -33,7 +33,6 @@ export const content = {
 
     book: "Réserver une consultation",
     whatsappCta: "Discuter sur WhatsApp",
-    whatsappFloat: "Besoin d'aide ? Écrivez-moi",
     whatsappHello: "Bonjour Nation5, je viens de votre portfolio et j'aimerais échanger avec vous.",
     servicesTitle: "Services & tarifs",
     servicesIntro: "Consultance à l'heure, en présentiel à Bunia ou à distance partout dans le monde. Tarifs en dollars américains (USD).",
@@ -191,9 +190,8 @@ export const content = {
     contactEyebrow: "Prenons contact",
     contactTitle: "Contactez-moi",
     contactCards: {
-      call: { title: "Appelez-moi", text: "Pour une question rapide ou pour discuter d'un projet.", cta: "Appeler" },
+      call: { title: "Appelez-moi", text: "Par appel ou WhatsApp, pour une question rapide ou un projet.", cta: "Appeler" },
       email: { title: "Écrivez-moi", text: "Envoyez-moi votre besoin en détail, je réponds sous 24 heures.", cta: "Envoyer un e-mail" },
-      whatsapp: { title: "WhatsApp", text: "Le moyen le plus rapide pour réserver une consultation.", cta: "Démarrer la discussion" },
     },
     contactText: "Une mission, un projet ou une question ? Basé à Bunia (RDC), je travaille aussi à distance partout dans le monde.",
     emailCta: "M'écrire",
@@ -216,7 +214,6 @@ export const content = {
 
     book: "Book a consultation",
     whatsappCta: "Chat on WhatsApp",
-    whatsappFloat: "Need help? Message me",
     whatsappHello: "Hello Nation5, I found your portfolio and would like to talk with you.",
     servicesTitle: "Services & rates",
     servicesIntro: "Hourly consulting, in person in Bunia or remotely anywhere in the world. Rates in US dollars (USD).",
@@ -374,9 +371,8 @@ export const content = {
     contactEyebrow: "Get in touch",
     contactTitle: "Contact me",
     contactCards: {
-      call: { title: "Call me", text: "For a quick question or to discuss a project.", cta: "Call now" },
+      call: { title: "Call me", text: "By phone or WhatsApp, for a quick question or a project.", cta: "Call now" },
       email: { title: "Email me", text: "Send me a detailed brief and I will reply within 24 hours.", cta: "Send email" },
-      whatsapp: { title: "WhatsApp", text: "The fastest way to book a consultation.", cta: "Start chat" },
     },
     contactText: "A mission, a project or a question? Based in Bunia (DRC), I also work remotely worldwide.",
     emailCta: "Email me",
