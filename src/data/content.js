@@ -170,6 +170,7 @@ export const content = {
 
 
     contactEyebrow: "Prenons contact",
+    copied: "Copié !",
     contactTitle: "Contactez-moi",
     contactCards: {
       call: { title: "Appelez-moi", text: "Par appel ou WhatsApp, pour une question rapide ou un projet.", cta: "Appeler" },
@@ -331,6 +332,7 @@ export const content = {
 
 
     contactEyebrow: "Get in touch",
+    copied: "Copied!",
     contactTitle: "Contact me",
     contactCards: {
       call: { title: "Call me", text: "By phone or WhatsApp, for a quick question or a project.", cta: "Call now" },
