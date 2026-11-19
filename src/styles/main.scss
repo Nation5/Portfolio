@@ -343,7 +343,7 @@ $ease: cubic-bezier(.22, .61, .36, 1);
 
 // Réalisations : zoom doux sur la vignette
 .project-thumb-wrap { position: relative; overflow: hidden; border-radius: 10px; background: var(--surface-2); }
-.project-thumb { transition: transform .5s $ease; }
+.project-thumb { display: block; transition: transform .5s $ease; }
 .project-thumb:hover { transform: none; }
 .project:hover .project-thumb { transform: scale(1.04); }
 .project-thumb.placeholder svg { transition: transform .5s $ease; }
