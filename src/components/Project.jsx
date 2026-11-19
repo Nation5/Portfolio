@@ -11,11 +11,27 @@ export default function Project({ t }) {
           <Reveal as="article" className="project" key={p.title} delay={(i % 3) * 120}>
             <div className="project-thumb-wrap">
               {p.image ? (
-                <img src={p.image} alt="" className="project-thumb" loading="lazy" />
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className="project-thumb"
+                  loading="lazy"
+                  onError={(e) => {
+                    if (p.fallback && !e.currentTarget.dataset.fb) {
+                      e.currentTarget.dataset.fb = "1";
+                      e.currentTarget.src = p.fallback;
+                    }
+                  }}
+                />
               ) : (
                 <div className="project-thumb placeholder" aria-hidden="true">
                   <FontAwesomeIcon icon={topicIcons[p.icon]} />
                 </div>
+              )}
+              {p.credit && (
+                <a className="photo-credit" href={p.credit.url} target="_blank" rel="noreferrer">
+                  {p.credit.author} · Unsplash
+                </a>
               )}
             </div>
             <h3>{p.title}</h3>

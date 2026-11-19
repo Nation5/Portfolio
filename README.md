@@ -29,3 +29,5 @@ Pour les remplacer par vos propres photos, placez le fichier dans `public/projec
 - Numéro WhatsApp : champ `whatsapp` dans `contact` (format international sans « + », ex. `243973451195`).
 - Services et tarifs horaires (USD) : tableau `services` dans `src/data/content.js` (FR et EN). Mettez `featured: true` sur le service à mettre en avant.
 - Moyens de paiement affichés : `paymentMethods`.
+
+Les vignettes des réalisations sont des photos Unsplash (licence Unsplash, usage gratuit) chargées depuis images.unsplash.com ; l'illustration SVG correspondante sert de secours si la photo ne charge pas. Pour mettre vos propres photos, remplacez `image:` par `` `${BASE}projects/ma-photo.jpg` `` et supprimez `credit`.

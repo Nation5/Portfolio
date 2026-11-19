@@ -342,7 +342,7 @@ $ease: cubic-bezier(.22, .61, .36, 1);
 .chip:hover { background: var(--accent); color: #fff; transform: translateY(-1px); }
 
 // Réalisations : zoom doux sur la vignette
-.project-thumb-wrap { overflow: hidden; border-radius: 6px; }
+.project-thumb-wrap { position: relative; overflow: hidden; border-radius: 10px; background: var(--surface-2); }
 .project-thumb { transition: transform .5s $ease; }
 .project-thumb:hover { transform: none; }
 .project:hover .project-thumb { transform: scale(1.04); }
@@ -551,3 +551,11 @@ $wa-dark: #1da851;
   .contact-sub { text-align: left; }
   .contact-cards { grid-template-columns: 1fr; }
 }
+.photo-credit {
+  position: absolute; right: 8px; bottom: 8px;
+  font-size: .68rem; padding: 2px 8px; border-radius: 999px;
+  background: rgba(0,0,0,.55); color: #fff; opacity: 0; transition: opacity .25s;
+  &:hover { color: #fff; }
+}
+.project:hover .photo-credit, .photo-credit:focus { opacity: 1; }
+@media (hover: none) { .photo-credit { opacity: .85; } }
