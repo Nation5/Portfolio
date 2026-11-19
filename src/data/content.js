@@ -18,8 +18,8 @@ export const contact = {
 export const content = {
   fr: {
     name: "Irenge Mihigo Karim",
-    role: "Gestionnaire des données",
-    tagline: "Données · Suivi-évaluation · Réseaux et systèmes d'information",
+    role: "ICT Officer & Coach en IA",
+    tagline: "Réseaux et systèmes · Intelligence artificielle · Développement · Données · Gestion de projet",
     nav: [
       ["Expertise", "expertise"],
       ["Parcours", "history"],
@@ -33,40 +33,40 @@ export const content = {
     toolsLabel: "Outils :",
     expertise: [
       {
-        icon: "database",
-        title: "Gestion des données et SIS",
-        text: "Collecte, nettoyage et consolidation des données de surveillance et de programme, avec un contrôle qualité quotidien et des bases agrégées fiables.",
-        tools: ["DHIS2", "KoboToolbox", "ODK", "SQL", "Excel avancé"],
-      },
-      {
-        icon: "chart",
-        title: "Analyse et visualisation",
-        text: "Tableaux de bord, courbes épidémiques et indicateurs clés pour les équipes de coordination, avec des analyses claires pour les briefings et rapports.",
-        tools: ["Power BI", "Excel", "Indicateurs de suivi", "Rapportage"],
-      },
-      {
-        icon: "map",
-        title: "Cartographie et riposte",
-        text: "Cartes de risque par aire de santé et analyses spatiales pour orienter les équipes de terrain dans des contextes d'urgence et d'insécurité.",
-        tools: ["QGIS", "Cartes de risque", "Surveillance épidémiologique"],
-      },
-      {
-        icon: "project",
-        title: "Suivi-évaluation et gestion de projet",
-        text: "Suivi des indicateurs, évaluation des résultats et pilotage de projets : planification, coordination des équipes, suivi des activités et rapportage aux partenaires.",
-        tools: ["Suivi-évaluation (S&E)", "Cadre logique", "Indicateurs", "Planification", "Coordination"],
-      },
-      {
         icon: "network",
-        title: "Réseaux et infrastructure",
-        text: "Conception, déploiement et maintenance de réseaux d'entreprise, diagnostic de connectivité et administration des systèmes informatiques.",
-        tools: ["LAN / WAN", "Routage et commutation", "Wi-Fi", "Cisco Packet Tracer", "Administration systèmes"],
+        title: "Réseaux et infrastructure IT",
+        text: "Conception, déploiement et maintenance de réseaux d'entreprise, administration des systèmes, support technique et sécurisation de l'environnement informatique.",
+        tools: ["LAN / WAN", "Routage et commutation", "Wi-Fi", "Cisco Packet Tracer", "Administration systèmes", "Support IT"],
+      },
+      {
+        icon: "ai",
+        title: "Coaching en intelligence artificielle",
+        text: "Accompagnement des équipes et des organisations dans l'adoption de l'IA générative : formation, bonnes pratiques et automatisation des tâches du quotidien.",
+        tools: ["IA générative", "Prompt engineering", "Automatisation", "Formation"],
       },
       {
         icon: "code",
         title: "Développement et programmation",
-        text: "Applications web et outils d'automatisation pour faciliter la collecte, le traitement et la présentation des données.",
+        text: "Applications web et outils sur mesure pour automatiser les processus, collecter les données et les présenter clairement.",
         tools: ["React", "Angular", "Python", "SQL", "C++"],
+      },
+      {
+        icon: "database",
+        title: "Données, analyse et SIG",
+        text: "Collecte mobile, nettoyage, systèmes d'information, tableaux de bord et cartographie pour transformer les données en décisions.",
+        tools: ["DHIS2", "KoboToolbox", "ODK", "Power BI", "Excel avancé", "QGIS"],
+      },
+      {
+        icon: "project",
+        title: "Suivi-évaluation et gestion de projet",
+        text: "Pilotage de projets de bout en bout : planification, coordination des équipes, suivi des indicateurs, évaluation des résultats et rapportage aux partenaires.",
+        tools: ["Gestion de projet", "Suivi-évaluation (S&E)", "Cadre logique", "Indicateurs", "Rapportage"],
+      },
+      {
+        icon: "chip",
+        title: "Électronique, télécoms et IoT",
+        text: "Systèmes embarqués, capteurs et communications sans fil, de la conception du prototype à la simulation des performances.",
+        tools: ["IoT", "Arduino", "MATLAB", "Proteus", "Télécommunications"],
       },
     ],
 
@@ -78,7 +78,7 @@ export const content = {
         title: "Gestionnaire des données",
         org: "IQVIA, en appui à l'OMS — Riposte MVE-17 (Ebola)",
         place: "Ituri, RDC",
-        text: "Données de surveillance des zones de santé de Bunia, Lita et Niania ; base agrégée des alertes et contacts ; courbes épidémiques Power BI ; cartes de risque ; briefings et rapports.",
+        text: "Gestion et analyse des données de la riposte en Ituri : tableaux de bord Power BI, cartographie et rapports pour la coordination.",
       },
       {
         type: "work",
@@ -118,30 +118,6 @@ export const content = {
     projectsNote: "Les données opérationnelles restent confidentielles ; les exemples sont présentés sans données nominatives.",
     projects: [
       {
-        icon: "chart",
-        title: "Suivi épidémiologique MVE-17",
-        text: "Courbes épidémiques et tableau de bord Power BI mis à jour pour les réunions de coordination de la riposte.",
-        tools: ["Power BI", "DHIS2"],
-      },
-      {
-        icon: "table",
-        title: "Base agrégée alertes et contacts",
-        text: "Structuration et mise à jour quotidienne de la base des alertes et du suivi des contacts de la zone de santé de Niania.",
-        tools: ["Excel", "Contrôle qualité"],
-      },
-      {
-        icon: "map",
-        title: "Carte de risque par aire de santé",
-        text: "Classement des aires de santé en trois niveaux de risque pour planifier les déplacements et interventions des équipes.",
-        tools: ["QGIS", "Analyse spatiale"],
-      },
-      {
-        icon: "mobile",
-        title: "Enquêtes de terrain mobiles",
-        text: "Formulaires de collecte avec logique de saut et validations, déployés hors ligne, puis analyse des résultats.",
-        tools: ["KoboToolbox", "ODK"],
-      },
-      {
         icon: "network",
         title: "Infrastructure réseau BDOM",
         text: "Maintenance et dépannage du réseau et des équipements informatiques d'une organisation de santé, pour une connectivité fiable des équipes.",
@@ -153,6 +129,30 @@ export const content = {
         text: "Projet de fin d'études : capteurs et modules Wi-Fi pour suivre en temps réel le remplissage des poubelles, firmware en C++ et simulations MATLAB.",
         tools: ["IoT", "C++", "Arduino", "MATLAB"],
       },
+      {
+        icon: "mobile",
+        title: "Enquêtes de terrain mobiles",
+        text: "Formulaires de collecte avec logique de saut et validations, déployés hors ligne, puis analyse des résultats.",
+        tools: ["KoboToolbox", "ODK"],
+      },
+      {
+        icon: "chart",
+        title: "Suivi épidémiologique MVE-17",
+        text: "Courbes épidémiques et tableau de bord Power BI mis à jour pour les réunions de coordination de la riposte.",
+        tools: ["Power BI", "DHIS2"],
+      },
+      {
+        icon: "map",
+        title: "Carte de risque par aire de santé",
+        text: "Classement des aires de santé en trois niveaux de risque pour planifier les déplacements et interventions des équipes.",
+        tools: ["QGIS", "Analyse spatiale"],
+      },
+      {
+        icon: "table",
+        title: "Base agrégée alertes et contacts",
+        text: "Structuration et mise à jour quotidienne de la base des alertes et du suivi des contacts de la zone de santé de Niania.",
+        tools: ["Excel", "Contrôle qualité"],
+      },
     ],
 
     languagesTitle: "Langues",
@@ -163,15 +163,15 @@ export const content = {
     ],
 
     contactTitle: "Contact",
-    contactText: "Disponible pour des postes en gestion de l'information, données, suivi-évaluation, gestion de projets et TIC dans le secteur humanitaire, en RDC et en Afrique.",
+    contactText: "Disponible pour des postes TIC, coaching en IA, développement, gestion de l'information, suivi-évaluation et gestion de projets, en RDC, en Afrique et à l'international.",
     emailCta: "M'écrire",
     footer: "Tous droits réservés.",
   },
 
   en: {
     name: "Irenge Mihigo Karim",
-    role: "Data Manager",
-    tagline: "Data · Monitoring & evaluation · Networks and information systems",
+    role: "ICT Officer & AI Coach",
+    tagline: "Networks & systems · Artificial intelligence · Development · Data · Project management",
     nav: [
       ["Expertise", "expertise"],
       ["Career", "history"],
@@ -185,40 +185,40 @@ export const content = {
     toolsLabel: "Tools:",
     expertise: [
       {
-        icon: "database",
-        title: "Data management & HIS",
-        text: "Collecting, cleaning and consolidating surveillance and programme data, with daily quality control and reliable aggregated databases.",
-        tools: ["DHIS2", "KoboToolbox", "ODK", "SQL", "Advanced Excel"],
-      },
-      {
-        icon: "chart",
-        title: "Analysis & visualisation",
-        text: "Dashboards, epidemic curves and key indicators for coordination teams, with clear analysis for briefings and reports.",
-        tools: ["Power BI", "Excel", "Monitoring indicators", "Reporting"],
-      },
-      {
-        icon: "map",
-        title: "Mapping & response",
-        text: "Risk maps by health area and spatial analysis to guide field teams in emergency and insecure settings.",
-        tools: ["QGIS", "Risk mapping", "Epidemiological surveillance"],
-      },
-      {
-        icon: "project",
-        title: "M&E and project management",
-        text: "Indicator monitoring, results evaluation and project management: planning, team coordination, activity follow-up and reporting to partners.",
-        tools: ["Monitoring & evaluation", "Logframe", "Indicators", "Planning", "Coordination"],
-      },
-      {
         icon: "network",
-        title: "Networking & infrastructure",
-        text: "Designing, deploying and maintaining enterprise networks, troubleshooting connectivity and administering IT systems.",
-        tools: ["LAN / WAN", "Routing & switching", "Wi-Fi", "Cisco Packet Tracer", "Systems administration"],
+        title: "Networking & IT infrastructure",
+        text: "Designing, deploying and maintaining enterprise networks, administering systems, providing technical support and securing the IT environment.",
+        tools: ["LAN / WAN", "Routing & switching", "Wi-Fi", "Cisco Packet Tracer", "Systems administration", "IT support"],
+      },
+      {
+        icon: "ai",
+        title: "AI coaching",
+        text: "Helping teams and organisations adopt generative AI: training, good practices and automating everyday tasks.",
+        tools: ["Generative AI", "Prompt engineering", "Automation", "Training"],
       },
       {
         icon: "code",
         title: "Development & programming",
-        text: "Web applications and automation tools that make data collection, processing and presentation easier.",
+        text: "Web applications and custom tools that automate processes, collect data and present it clearly.",
         tools: ["React", "Angular", "Python", "SQL", "C++"],
+      },
+      {
+        icon: "database",
+        title: "Data, analysis & GIS",
+        text: "Mobile data collection, cleaning, information systems, dashboards and mapping that turn data into decisions.",
+        tools: ["DHIS2", "KoboToolbox", "ODK", "Power BI", "Advanced Excel", "QGIS"],
+      },
+      {
+        icon: "project",
+        title: "M&E and project management",
+        text: "End-to-end project delivery: planning, team coordination, indicator monitoring, results evaluation and reporting to partners.",
+        tools: ["Project management", "Monitoring & evaluation", "Logframe", "Indicators", "Reporting"],
+      },
+      {
+        icon: "chip",
+        title: "Electronics, telecoms & IoT",
+        text: "Embedded systems, sensors and wireless communications, from prototype design to performance simulation.",
+        tools: ["IoT", "Arduino", "MATLAB", "Proteus", "Telecommunications"],
       },
     ],
 
@@ -230,7 +230,7 @@ export const content = {
         title: "Data Manager",
         org: "IQVIA, in support of WHO — Ebola (MVE-17) response",
         place: "Ituri, DRC",
-        text: "Surveillance data for the Bunia, Lita and Niania health zones; aggregated alerts and contacts database; Power BI epidemic curves; risk maps; briefings and reports.",
+        text: "Managed and analysed response data in Ituri: Power BI dashboards, mapping and reports for coordination.",
       },
       {
         type: "work",
@@ -270,30 +270,6 @@ export const content = {
     projectsNote: "Operational data remains confidential; examples are described without personal data.",
     projects: [
       {
-        icon: "chart",
-        title: "MVE-17 epidemiological monitoring",
-        text: "Epidemic curves and a Power BI dashboard kept up to date for response coordination meetings.",
-        tools: ["Power BI", "DHIS2"],
-      },
-      {
-        icon: "table",
-        title: "Aggregated alerts & contacts database",
-        text: "Structured and updated daily the alerts and contact-tracing database for the Niania health zone.",
-        tools: ["Excel", "Quality control"],
-      },
-      {
-        icon: "map",
-        title: "Risk map by health area",
-        text: "Ranked health areas into three risk levels to plan team movements and interventions.",
-        tools: ["QGIS", "Spatial analysis"],
-      },
-      {
-        icon: "mobile",
-        title: "Mobile field surveys",
-        text: "Data collection forms with skip logic and validation, deployed offline, followed by analysis of results.",
-        tools: ["KoboToolbox", "ODK"],
-      },
-      {
         icon: "network",
         title: "BDOM network infrastructure",
         text: "Maintained and troubleshot the network and IT equipment of a health organisation to keep teams reliably connected.",
@@ -305,6 +281,30 @@ export const content = {
         text: "Final-year project: sensors and Wi-Fi modules to track bin fill levels in real time, C++ firmware and MATLAB simulations.",
         tools: ["IoT", "C++", "Arduino", "MATLAB"],
       },
+      {
+        icon: "mobile",
+        title: "Mobile field surveys",
+        text: "Data collection forms with skip logic and validation, deployed offline, followed by analysis of results.",
+        tools: ["KoboToolbox", "ODK"],
+      },
+      {
+        icon: "chart",
+        title: "MVE-17 epidemiological monitoring",
+        text: "Epidemic curves and a Power BI dashboard kept up to date for response coordination meetings.",
+        tools: ["Power BI", "DHIS2"],
+      },
+      {
+        icon: "map",
+        title: "Risk map by health area",
+        text: "Ranked health areas into three risk levels to plan team movements and interventions.",
+        tools: ["QGIS", "Spatial analysis"],
+      },
+      {
+        icon: "table",
+        title: "Aggregated alerts & contacts database",
+        text: "Structured and updated daily the alerts and contact-tracing database for the Niania health zone.",
+        tools: ["Excel", "Quality control"],
+      },
     ],
 
     languagesTitle: "Languages",
@@ -315,7 +315,7 @@ export const content = {
     ],
 
     contactTitle: "Contact",
-    contactText: "Open to information management, data, MEAL, project management and ICT roles in the humanitarian sector, in the DRC and across Africa.",
+    contactText: "Open to ICT, AI coaching, development, information management, MEAL and project management roles in the DRC, across Africa and internationally.",
     emailCta: "Email me",
     footer: "All rights reserved.",
   },

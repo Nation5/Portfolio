@@ -1,6 +1,6 @@
 import {
   faDatabase, faChartLine, faMapLocationDot, faTableList, faMobileScreen,
-  faDiagramProject, faNetworkWired, faCode, faMicrochip,
+  faDiagramProject, faNetworkWired, faCode, faMicrochip, faRobot,
   faBriefcase, faGraduationCap, faSun, faMoon, faBars, faXmark,
   faEnvelope, faPhone, faLocationDot, faFileArrowDown, faArrowDown,
 } from "@fortawesome/free-solid-svg-icons";
@@ -16,6 +16,7 @@ export const topicIcons = {
   network: faNetworkWired,
   code: faCode,
   chip: faMicrochip,
+  ai: faRobot,
 };
 
 export {
