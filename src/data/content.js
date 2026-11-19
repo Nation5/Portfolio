@@ -187,15 +187,15 @@ export const content = {
       },
     ],
 
-    languagesTitle: "Langues",
-    languages: [
-      ["Français", "Courant"],
-      ["Swahili", "Langue maternelle"],
-      ["Anglais", "Professionnel"],
-    ],
 
-    contactTitle: "Contact",
-    contactText: "Disponible pour des postes TIC, coaching en IA, développement, gestion de l'information, suivi-évaluation et gestion de projets, en RDC, en Afrique et à l'international.",
+    contactEyebrow: "Prenons contact",
+    contactTitle: "Contactez-moi",
+    contactCards: {
+      call: { title: "Appelez-moi", text: "Pour une question rapide ou pour discuter d'un projet.", cta: "Appeler" },
+      email: { title: "Écrivez-moi", text: "Envoyez-moi votre besoin en détail, je réponds sous 24 heures.", cta: "Envoyer un e-mail" },
+      whatsapp: { title: "WhatsApp", text: "Le moyen le plus rapide pour réserver une consultation.", cta: "Démarrer la discussion" },
+    },
+    contactText: "Une mission, un projet ou une question ? Basé à Bunia (RDC), je travaille aussi à distance partout dans le monde.",
     emailCta: "M'écrire",
     footer: "Tous droits réservés.",
   },
@@ -370,15 +370,15 @@ export const content = {
       },
     ],
 
-    languagesTitle: "Languages",
-    languages: [
-      ["French", "Fluent"],
-      ["Swahili", "Native"],
-      ["English", "Professional"],
-    ],
 
-    contactTitle: "Contact",
-    contactText: "Open to ICT, AI coaching, development, information management, MEAL and project management roles in the DRC, across Africa and internationally.",
+    contactEyebrow: "Get in touch",
+    contactTitle: "Contact me",
+    contactCards: {
+      call: { title: "Call me", text: "For a quick question or to discuss a project.", cta: "Call now" },
+      email: { title: "Email me", text: "Send me a detailed brief and I will reply within 24 hours.", cta: "Send email" },
+      whatsapp: { title: "WhatsApp", text: "The fastest way to book a consultation.", cta: "Start chat" },
+    },
+    contactText: "A mission, a project or a question? Based in Bunia (DRC), I also work remotely worldwide.",
     emailCta: "Email me",
     footer: "All rights reserved.",
   },

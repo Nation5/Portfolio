@@ -516,3 +516,40 @@ $wa-dark: #1da851;
 @media (prefers-reduced-motion: reduce) {
   .nav-cta, .wa-float, .wa-float-icon::before { animation: none !important; }
 }
+
+// ── Contact (inspiré de XHAR Studio) ─────
+.contact-head {
+  display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-bottom: 40px;
+}
+.eyebrow { display: block; font-size: .78rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.contact-title { margin: 0; font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 800; line-height: 1.05; letter-spacing: -.02em; }
+.contact-sub { margin: 0; max-width: 46ch; color: var(--muted); text-align: right; }
+.contact-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.contact-card {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  padding: 36px 26px 30px; border-radius: 18px; background: var(--surface); border: 1px solid var(--border);
+  h3 { margin: 18px 0 8px; font-size: 1.35rem; }
+  &:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(0,0,0,.14); border-color: color-mix(in srgb, var(--accent) 40%, var(--border)); }
+}
+.contact-icon {
+  display: grid; place-items: center; width: 54px; height: 54px; border-radius: 50%;
+  border: 1px solid var(--border); font-size: 1.25rem; color: var(--text);
+  transition: background .25s, color .25s, border-color .25s;
+}
+.contact-card:hover .contact-icon { background: var(--accent); color: #fff; border-color: var(--accent); }
+.contact-card.whatsapp:hover .contact-icon { background: #25d366; border-color: #25d366; }
+.contact-text { margin: 0 0 18px; color: var(--muted); font-size: .96rem; max-width: 30ch; }
+.contact-value { margin: 0 0 22px; font-weight: 600; font-size: 1.02rem; word-break: break-word; }
+.contact-btn {
+  margin-top: auto; display: inline-block; padding: 11px 24px; border-radius: 10px;
+  background: var(--text); color: var(--bg); font-weight: 600; font-size: .95rem;
+  transition: transform .2s, background .2s, color .2s;
+  &:hover { transform: translateY(-2px); background: #{$accent-dark}; color: #fff; }
+}
+.contact-card.whatsapp .contact-btn:hover { background: #1da851; }
+
+@media (max-width: 900px) {
+  .contact-head { flex-direction: column; align-items: flex-start; }
+  .contact-sub { text-align: left; }
+  .contact-cards { grid-template-columns: 1fr; }
+}

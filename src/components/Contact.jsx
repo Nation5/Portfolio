@@ -1,40 +1,44 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone, faLocationDot, faLinkedin } from "./icons";
-import Reveal from "./Reveal";
+import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { waLink } from "./whatsapp";
+import Reveal from "./Reveal";
 
 export default function Contact({ t, contact }) {
+  const c = t.contactCards;
+  const cards = [
+    { key: "call", icon: faPhone, ...c.call, value: contact.phone, href: `tel:+${contact.whatsapp}` },
+    { key: "email", icon: faEnvelope, ...c.email, value: contact.email, href: `mailto:${contact.email}` },
+    { key: "whatsapp", icon: faWhatsapp, ...c.whatsapp, value: contact.phone, href: waLink(contact.whatsapp, t.whatsappHello), external: true },
+  ];
+
   return (
     <section className="section" id="contact">
-      <Reveal as="h2" className="section-title">{t.contactTitle}</Reveal>
-      <div className="contact-grid">
+      <div className="contact-head">
         <Reveal>
-          <p className="lead">{t.contactText}</p>
-          <div className="actions">
-            <a className="btn primary" href={`mailto:${contact.email}`}>
-              <FontAwesomeIcon icon={faEnvelope} /> {t.emailCta}
-            </a>
-            <a className="btn wa" href={waLink(contact.whatsapp, t.whatsappHello)} target="_blank" rel="noreferrer">
-              <FontAwesomeIcon icon={faWhatsapp} /> {t.whatsappCta}
-            </a>
-          </div>
+          <span className="eyebrow">{t.contactEyebrow}</span>
+          <h2 className="contact-title">{t.contactTitle}</h2>
         </Reveal>
-        <Reveal as="ul" className="contact-list card" delay={150}>
-          <li><FontAwesomeIcon icon={faEnvelope} /><a href={`mailto:${contact.email}`}>{contact.email}</a></li>
-          <li><FontAwesomeIcon icon={faPhone} /><span>{contact.phone}</span></li>
-          <li><FontAwesomeIcon icon={faWhatsapp} /><a href={waLink(contact.whatsapp, t.whatsappHello)} target="_blank" rel="noreferrer">WhatsApp</a></li>
-          <li><FontAwesomeIcon icon={faLinkedin} /><a href={contact.linkedin} target="_blank" rel="noreferrer">LinkedIn</a></li>
-          <li><FontAwesomeIcon icon={faLocationDot} /><span>{contact.location}</span></li>
-        </Reveal>
+        <Reveal as="p" variant="fade" className="contact-sub" delay={150}>{t.contactText}</Reveal>
       </div>
 
-      <Reveal as="h3" className="sub">{t.languagesTitle}</Reveal>
-      <ul className="languages">
-        {t.languages.map(([l, lvl], i) => (
-          <Reveal as="li" className="card" key={l} delay={i * 100}><strong>{l}</strong><span>{lvl}</span></Reveal>
+      <div className="contact-cards">
+        {cards.map((card, i) => (
+          <Reveal as="article" key={card.key} delay={i * 110} className={`contact-card card ${card.key}`}>
+            <span className="contact-icon"><FontAwesomeIcon icon={card.icon} /></span>
+            <h3>{card.title}</h3>
+            <p className="contact-text">{card.text}</p>
+            <p className="contact-value">{card.value}</p>
+            <a
+              className="contact-btn"
+              href={card.href}
+              {...(card.external ? { target: "_blank", rel: "noreferrer" } : {})}
+            >
+              {card.cta}
+            </a>
+          </Reveal>
         ))}
-      </ul>
+      </div>
     </section>
   );
 }
