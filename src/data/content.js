@@ -12,12 +12,12 @@ export const contact = {
   github: "https://github.com/Nation5",
   location: "Bunia, Ituri — RDC",
   photo: `${BASE}photo.jpg`, // fichier dans /public
-  initials: "IK",
+  initials: "N5",
 };
 
 export const content = {
   fr: {
-    name: "Irenge Mihigo Karim",
+    name: "Nation5",
     role: "ICT Officer & Coach en IA",
     tagline: "Réseaux et systèmes · Intelligence artificielle · Développement · Données · Gestion de projet",
     nav: [
@@ -169,7 +169,7 @@ export const content = {
   },
 
   en: {
-    name: "Irenge Mihigo Karim",
+    name: "Nation5",
     role: "ICT Officer & AI Coach",
     tagline: "Networks & systems · Artificial intelligence · Development · Data · Project management",
     nav: [
