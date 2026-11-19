@@ -28,6 +28,7 @@ export const content = {
       ["Contact", "contact"],
     ],
     menu: "Menu",
+    toTop: "Retour en haut",
 
     expertiseTitle: "Expertise",
     toolsLabel: "Outils :",
@@ -150,6 +151,7 @@ export const content = {
       ["Contact", "contact"],
     ],
     menu: "Menu",
+    toTop: "Back to top",
 
     expertiseTitle: "Expertise",
     toolsLabel: "Tools:",

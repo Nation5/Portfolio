@@ -7,7 +7,7 @@ import Timeline from "./components/Timeline";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import FadeIn from "./components/FadeIn";
+import ScrollProgress from "./components/ScrollProgress";
 
 const read = (key, fallback) => {
   try { return localStorage.getItem(key) || fallback; } catch { return fallback; }
@@ -26,6 +26,7 @@ export default function App() {
 
   return (
     <div className={`main-container ${mode}-mode`}>
+      <ScrollProgress label={t.toTop} />
       <Navigation
         t={t}
         mode={mode}
@@ -33,13 +34,14 @@ export default function App() {
         lang={lang}
         onLangChange={setLang}
       />
-      <FadeIn>
+      {/* key={lang} : relance les animations d'entrée au changement de langue */}
+      <main key={lang}>
         <Main t={t} contact={contact} />
         <Expertise t={t} />
         <Timeline t={t} />
         <Project t={t} />
         <Contact t={t} contact={contact} />
-      </FadeIn>
+      </main>
       <Footer t={t} contact={contact} />
     </div>
   );

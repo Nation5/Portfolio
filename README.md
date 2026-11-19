@@ -6,7 +6,7 @@ Mise en page adaptée du modèle [yujisatojr/react-portfolio-template](https://g
 ## Lancer en local
 ```bash
 npm install
-npm run dev      # http://localhost:5173/portfolio/
+npm run dev      # http://localhost:5173/
 ```
 
 ## Modifier le contenu
@@ -20,4 +20,4 @@ Fichiers à placer dans `public/` :
 - Pour illustrer une réalisation, ajoutez `image: \`${BASE}nom.png\`` à l'élément voulu.
 
 ## En ligne
-Publication automatique sur https://nation5.github.io/portfolio/ à chaque push sur `main` (GitHub Actions → Settings › Pages › Source : GitHub Actions).
+Publication automatique sur https://nation5.github.io/Portfolio/ à chaque push sur `main` (GitHub Actions → Settings › Pages › Source : GitHub Actions).

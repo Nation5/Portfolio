@@ -96,10 +96,17 @@ button { font: inherit; }
   min-height: 640px;
   margin-top: 64px;
   display: flex; align-items: center;
+  overflow: hidden;
+}
+.hero-wave {
+  position: absolute; inset: -6% -4%;
   background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)), var(--hero-bg);
   background-size: cover; background-position: center;
+  animation: wave-drift 18s ease-in-out infinite alternate, fade-in 1.4s ease-out both;
+  will-change: transform;
 }
 .hero-inner {
+  position: relative; z-index: 1;
   width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 12%;
   display: flex; align-items: center; gap: 36px;
 }
@@ -114,7 +121,7 @@ button { font: inherit; }
   h1 { font-size: clamp(2.6rem, 6vw, 4.6rem); line-height: 1.05; margin: 8px 0 10px; font-weight: 800; letter-spacing: -.01em; }
 }
 .socials { display: flex; gap: 14px; font-size: 1.7rem; }
-.hero-role { font-size: 1.5rem; margin: 0; }
+.hero-role { font-size: 1.5rem; margin: 0; display: inline-block; position: relative; padding-bottom: 6px; }
 .hero-tagline { margin: 8px 0 0; color: var(--muted); font-size: 1.05rem; }
 
 // ── Sections ─────────────────────────────
@@ -252,4 +259,134 @@ button { font: inherit; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { transition: none !important; }
+}
+
+// ═════════════════════════════════════════
+// Animations — discrètes et professionnelles
+// ═════════════════════════════════════════
+$ease: cubic-bezier(.22, .61, .36, 1);
+
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes wave-drift {
+  from { transform: translate3d(-1.5%, 0, 0) scale(1.02); }
+  to   { transform: translate3d(1.5%, -2%, 0) scale(1.06); }
+}
+@keyframes bar-grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes bob { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 7px); } }
+@keyframes spin-in { from { transform: rotate(-90deg) scale(.6); opacity: 0; } to { transform: none; opacity: 1; } }
+
+// Entrée de l'accueil, échelonnée
+.enter { animation: rise .9s $ease both; animation-delay: var(--d, 0ms); }
+.role-bar {
+  position: absolute; left: 0; bottom: 0; height: 2px; width: 56px;
+  background: var(--accent); transform-origin: left;
+  animation: bar-grow .8s $ease 1s both;
+}
+.scroll-hint {
+  position: absolute; left: 50%; bottom: 28px; z-index: 1;
+  width: 42px; height: 42px; border-radius: 50%;
+  border: 1px solid var(--border); background: transparent; color: var(--muted);
+  cursor: pointer; animation: bob 2.4s ease-in-out 1.6s infinite, fade-in .8s 1.4s both;
+  &:hover { color: var(--accent); border-color: var(--accent); }
+}
+.socials a { display: inline-block; transition: transform .2s $ease, color .2s; }
+.socials a:hover { transform: translateY(-3px); }
+.avatar { transition: transform .4s $ease, box-shadow .4s; }
+.avatar:hover { transform: scale(1.04); box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent) 20%, transparent); }
+
+// Apparition au défilement
+.reveal:not(.revealed) { transition: opacity .8s $ease, transform .8s $ease; }
+.reveal-up    { opacity: 0; transform: translateY(28px); }
+.reveal-left  { opacity: 0; transform: translateX(-36px); }
+.reveal-right { opacity: 0; transform: translateX(36px); }
+.reveal-fade  { opacity: 0; }
+.reveal-pop   { opacity: 0; transform: scale(.4); }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+// Titres de section : petit trait d'accent qui se dessine
+.section-title { position: relative; padding-bottom: 10px; }
+.section-title::after {
+  content: ""; position: absolute; left: 0; bottom: 0; height: 3px; width: 48px;
+  background: var(--accent); border-radius: 2px;
+  transform: scaleX(0); transform-origin: left; transition: transform .8s $ease .25s;
+}
+.section-title.is-visible::after { transform: scaleX(1); }
+
+// Frise : la ligne se trace de haut en bas
+.reveal-line { opacity: 1; }
+.timeline::before { transform: scaleY(0); transform-origin: top; transition: transform 1.6s $ease; }
+.timeline.is-visible::before { transform: scaleY(1); }
+
+// Cartes : léger soulèvement au survol
+.card { transition: transform .25s $ease, box-shadow .25s $ease, border-color .25s, opacity .8s $ease; }
+.tl-card:hover, .contact-list:hover, .languages li:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .12);
+}
+.skill { padding: 4px 0; }
+.skill-icon {
+  display: inline-grid; place-items: center; width: 64px; height: 64px; border-radius: 14px;
+  font-size: 1.7rem; color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  transition: transform .3s $ease, background .3s, color .3s;
+}
+.skill:hover .skill-icon { transform: translateY(-4px) rotate(-4deg); background: var(--accent); color: #fff; }
+.chip { transition: background .2s, color .2s, transform .2s; }
+.chip:hover { background: var(--accent); color: #fff; transform: translateY(-1px); }
+
+// Réalisations : zoom doux sur la vignette
+.project-thumb-wrap { overflow: hidden; border-radius: 6px; }
+.project-thumb { transition: transform .5s $ease; }
+.project-thumb:hover { transform: none; }
+.project:hover .project-thumb { transform: scale(1.04); }
+.project-thumb.placeholder svg { transition: transform .5s $ease; }
+.project:hover .project-thumb.placeholder svg { transform: scale(1.15); }
+.project h3 { transition: color .2s; }
+.project:hover h3 { color: var(--accent); }
+
+// Navigation : soulignement animé + section active
+.navbar-links button { position: relative; }
+.navbar-links button::after {
+  content: ""; position: absolute; left: 12px; right: 12px; bottom: 2px; height: 2px;
+  background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .25s $ease;
+}
+.navbar-links button:hover::after, .navbar-links button.active::after { transform: scaleX(1); }
+.navbar-links button.active { color: var(--accent); }
+.spin-in { animation: spin-in .4s $ease; }
+
+// Boutons
+.btn { transition: background .2s, color .2s, border-color .2s, transform .2s $ease; }
+.btn:hover { transform: translateY(-2px); }
+.btn svg { transition: transform .2s $ease; }
+.btn:hover svg { transform: translateX(2px); }
+
+// Barre de progression + retour en haut
+.scroll-progress {
+  position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 20;
+  background: var(--accent); transform-origin: left; transform: scaleX(0);
+}
+.to-top {
+  position: fixed; right: 24px; bottom: 24px; z-index: 15;
+  width: 44px; height: 44px; border-radius: 50%; cursor: pointer;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .15);
+  opacity: 0; transform: translateY(12px); pointer-events: none;
+  transition: opacity .3s, transform .3s $ease, background .2s, color .2s;
+  &.show { opacity: 1; transform: none; pointer-events: auto; }
+  &:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+}
+
+// Changement de thème en douceur
+.navbar, .card, .chip, .lang button { transition-property: background, color, border-color, box-shadow, transform, opacity; }
+
+@media (max-width: 900px) {
+  .reveal-left, .reveal-right { transform: translateY(24px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enter, .hero-wave, .scroll-hint, .role-bar, .spin-in { animation: none !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .timeline::before, .section-title::after { transform: none !important; }
 }
