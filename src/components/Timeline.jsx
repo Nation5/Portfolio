@@ -3,11 +3,34 @@ import { faBriefcase, faGraduationCap } from "./icons";
 import Reveal from "./Reveal";
 
 export default function Timeline({ t }) {
+  const items = t.history;
+
+  // Un seul élément : carte simple plutôt qu'une frise
+  if (items.length === 1) {
+    const item = items[0];
+    return (
+      <section className="section" id="history">
+        <Reveal as="h2" className="section-title">{t.historyTitle}</Reveal>
+        <Reveal className="edu-card card">
+          <span className="edu-icon">
+            <FontAwesomeIcon icon={item.type === "school" ? faGraduationCap : faBriefcase} />
+          </span>
+          <div>
+            <span className="tl-date">{item.date}</span>
+            <h3>{item.title}</h3>
+            <h4>{item.org} · {item.place}</h4>
+            {item.text && <p>{item.text}</p>}
+          </div>
+        </Reveal>
+      </section>
+    );
+  }
+
   return (
     <section className="section" id="history">
       <Reveal as="h2" className="section-title">{t.historyTitle}</Reveal>
       <Reveal as="ol" variant="line" className="timeline">
-        {t.history.map((item, i) => {
+        {items.map((item, i) => {
           const side = i % 2 ? "right" : "left";
           return (
             <li key={item.title} className={`tl-item ${side}`}>
