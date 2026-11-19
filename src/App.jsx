@@ -6,6 +6,8 @@ import Expertise from "./components/Expertise";
 import Timeline from "./components/Timeline";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
+import Services from "./components/Services";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 import Footer from "./components/Footer";
 import ScrollProgress from "./components/ScrollProgress";
 
@@ -40,9 +42,11 @@ export default function App() {
         <Expertise t={t} />
         <Timeline t={t} />
         <Project t={t} />
+        <Services t={t} contact={contact} />
         <Contact t={t} contact={contact} />
       </main>
       <Footer t={t} contact={contact} />
+      <WhatsAppFloat t={t} contact={contact} />
     </div>
   );
 }

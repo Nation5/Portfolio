@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone, faLocationDot, faLinkedin } from "./icons";
 import Reveal from "./Reveal";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { waLink } from "./whatsapp";
 
 export default function Contact({ t, contact }) {
   return (
@@ -13,11 +15,15 @@ export default function Contact({ t, contact }) {
             <a className="btn primary" href={`mailto:${contact.email}`}>
               <FontAwesomeIcon icon={faEnvelope} /> {t.emailCta}
             </a>
+            <a className="btn wa" href={waLink(contact.whatsapp, t.whatsappHello)} target="_blank" rel="noreferrer">
+              <FontAwesomeIcon icon={faWhatsapp} /> {t.whatsappCta}
+            </a>
           </div>
         </Reveal>
         <Reveal as="ul" className="contact-list card" delay={150}>
           <li><FontAwesomeIcon icon={faEnvelope} /><a href={`mailto:${contact.email}`}>{contact.email}</a></li>
           <li><FontAwesomeIcon icon={faPhone} /><span>{contact.phone}</span></li>
+          <li><FontAwesomeIcon icon={faWhatsapp} /><a href={waLink(contact.whatsapp, t.whatsappHello)} target="_blank" rel="noreferrer">WhatsApp</a></li>
           <li><FontAwesomeIcon icon={faLinkedin} /><a href={contact.linkedin} target="_blank" rel="noreferrer">LinkedIn</a></li>
           <li><FontAwesomeIcon icon={faLocationDot} /><span>{contact.location}</span></li>
         </Reveal>

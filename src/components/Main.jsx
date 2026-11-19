@@ -1,5 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin, faArrowDown } from "./icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
+import { waLink } from "./whatsapp";
 
 export default function Main({ t, contact }) {
   return (
@@ -20,6 +23,14 @@ export default function Main({ t, contact }) {
             <span className="role-bar" />
           </p>
           <p className="hero-tagline enter" style={{ "--d": "600ms" }}>{t.tagline}</p>
+          <div className="hero-actions enter" style={{ "--d": "750ms" }}>
+            <button className="pill primary" onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}>
+              <FontAwesomeIcon icon={faCalendarCheck} /> {t.book}
+            </button>
+            <a className="pill wa" href={waLink(contact.whatsapp, t.whatsappHello)} target="_blank" rel="noreferrer">
+              <FontAwesomeIcon icon={faWhatsapp} /> {t.whatsappCta}
+            </a>
+          </div>
         </div>
       </div>
       <button

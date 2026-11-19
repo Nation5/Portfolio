@@ -60,6 +60,7 @@ export default function Navigation({ t, mode, onModeChange, lang, onLangChange }
           {t.nav.map(([label, id]) => (
             <button key={id} onClick={() => go(id)} className={active === id ? "active" : ""}>{label}</button>
           ))}
+          <button className="nav-cta" onClick={() => go("services")}>{t.book}</button>
         </nav>
       </div>
     </header>

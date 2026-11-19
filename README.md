@@ -24,3 +24,8 @@ Publication automatique sur https://nation5.github.io/Portfolio/ à chaque push 
 ## Illustrations des réalisations
 Les images de `public/projects/` sont des illustrations SVG originales (motifs bogolan et kente).
 Pour les remplacer par vos propres photos, placez le fichier dans `public/projects/` et changez le champ `image` dans `src/data/content.js`.
+
+## WhatsApp, services et tarifs
+- Numéro WhatsApp : champ `whatsapp` dans `contact` (format international sans « + », ex. `243973451195`).
+- Services et tarifs horaires (USD) : tableau `services` dans `src/data/content.js` (FR et EN). Mettez `featured: true` sur le service à mettre en avant.
+- Moyens de paiement affichés : `paymentMethods`.
