@@ -20,3 +20,7 @@ Fichiers à placer dans `public/` :
 
 ## En ligne
 Publication automatique sur https://nation5.github.io/Portfolio/ à chaque push sur `main` (GitHub Actions → Settings › Pages › Source : GitHub Actions).
+
+## Illustrations des réalisations
+Les images de `public/projects/` sont des illustrations SVG originales (motifs bogolan et kente).
+Pour les remplacer par vos propres photos, placez le fichier dans `public/projects/` et changez le champ `image` dans `src/data/content.js`.

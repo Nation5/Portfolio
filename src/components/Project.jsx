@@ -11,7 +11,7 @@ export default function Project({ t }) {
           <Reveal as="article" className="project" key={p.title} delay={(i % 3) * 120}>
             <div className="project-thumb-wrap">
               {p.image ? (
-                <img src={p.image} alt="" className="project-thumb" />
+                <img src={p.image} alt="" className="project-thumb" loading="lazy" />
               ) : (
                 <div className="project-thumb placeholder" aria-hidden="true">
                   <FontAwesomeIcon icon={topicIcons[p.icon]} />
