@@ -8,7 +8,7 @@ export default function Expertise({ t }) {
       <Reveal as="h2" className="section-title">{t.expertiseTitle}</Reveal>
       <div className="skills-grid">
         {t.expertise.map((s, i) => (
-          <Reveal as="article" className="skill card" key={s.title} delay={i * 120}>
+          <Reveal as="article" className="skill card" key={s.title} delay={(i % 3) * 120}>
             <span className="skill-icon"><FontAwesomeIcon icon={topicIcons[s.icon]} /></span>
             <h3>{s.title}</h3>
             <p>{s.text}</p>

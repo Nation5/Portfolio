@@ -6,12 +6,11 @@
 const BASE = import.meta.env.BASE_URL;
 
 export const contact = {
-  email: "votre.email@exemple.com", // ← à remplacer
-  phone: "+243 000 000 000", // ← à remplacer
-  linkedin: "https://www.linkedin.com/in/votre-profil", // ← à remplacer
+  email: "karimnation23@gmail.com",
+  phone: "+243 973 451 195",
+  linkedin: "https://www.linkedin.com/in/karimnation/",
   github: "https://github.com/Nation5",
   location: "Bunia, Ituri — RDC",
-  cv: `${BASE}cv-irenge-mihigo-karim.pdf`, // placez votre CV PDF dans /public
   photo: null, // ex. `${BASE}photo.jpg` après avoir placé photo.jpg dans /public
   initials: "IK",
 };
@@ -20,7 +19,7 @@ export const content = {
   fr: {
     name: "Irenge Mihigo Karim",
     role: "Gestionnaire des données",
-    tagline: "Santé publique · Riposte aux épidémies · Systèmes d'information",
+    tagline: "Données · Suivi-évaluation · Réseaux et systèmes d'information",
     nav: [
       ["Expertise", "expertise"],
       ["Parcours", "history"],
@@ -51,6 +50,24 @@ export const content = {
         text: "Cartes de risque par aire de santé et analyses spatiales pour orienter les équipes de terrain dans des contextes d'urgence et d'insécurité.",
         tools: ["QGIS", "Cartes de risque", "Surveillance épidémiologique"],
       },
+      {
+        icon: "project",
+        title: "Suivi-évaluation et gestion de projet",
+        text: "Suivi des indicateurs, évaluation des résultats et pilotage de projets : planification, coordination des équipes, suivi des activités et rapportage aux partenaires.",
+        tools: ["Suivi-évaluation (S&E)", "Cadre logique", "Indicateurs", "Planification", "Coordination"],
+      },
+      {
+        icon: "network",
+        title: "Réseaux et infrastructure",
+        text: "Conception, déploiement et maintenance de réseaux d'entreprise, diagnostic de connectivité et administration des systèmes informatiques.",
+        tools: ["LAN / WAN", "Routage et commutation", "Wi-Fi", "Cisco Packet Tracer", "Administration systèmes"],
+      },
+      {
+        icon: "code",
+        title: "Développement et programmation",
+        text: "Applications web et outils d'automatisation pour faciliter la collecte, le traitement et la présentation des données.",
+        tools: ["React", "Angular", "Python", "SQL", "C++"],
+      },
     ],
 
     historyTitle: "Parcours",
@@ -69,7 +86,7 @@ export const content = {
         title: "Responsable TIC",
         org: "BDOM Bukavu",
         place: "Sud-Kivu, RDC",
-        text: "Infrastructure informatique et réseaux ; appui à la gestion des données et au système d'information sanitaire (DHIS2) ; rapports d'analyse pour la direction.",
+        text: "Administration de l'infrastructure informatique et des réseaux (LAN, Wi-Fi, connectivité) ; support technique ; appui à la gestion des données et au système d'information sanitaire (DHIS2) ; rapports d'analyse pour la direction.",
       },
       {
         type: "work",
@@ -124,6 +141,18 @@ export const content = {
         text: "Formulaires de collecte avec logique de saut et validations, déployés hors ligne, puis analyse des résultats.",
         tools: ["KoboToolbox", "ODK"],
       },
+      {
+        icon: "network",
+        title: "Infrastructure réseau BDOM",
+        text: "Maintenance et dépannage du réseau et des équipements informatiques d'une organisation de santé, pour une connectivité fiable des équipes.",
+        tools: ["Réseaux", "Support IT"],
+      },
+      {
+        icon: "chip",
+        title: "Système IoT de surveillance des déchets",
+        text: "Projet de fin d'études : capteurs et modules Wi-Fi pour suivre en temps réel le remplissage des poubelles, firmware en C++ et simulations MATLAB.",
+        tools: ["IoT", "C++", "Arduino", "MATLAB"],
+      },
     ],
 
     languagesTitle: "Langues",
@@ -134,16 +163,15 @@ export const content = {
     ],
 
     contactTitle: "Contact",
-    contactText: "Disponible pour des postes en gestion de l'information, données et suivi-évaluation dans le secteur humanitaire, en RDC et en Afrique.",
+    contactText: "Disponible pour des postes en gestion de l'information, données, suivi-évaluation, gestion de projets et TIC dans le secteur humanitaire, en RDC et en Afrique.",
     emailCta: "M'écrire",
-    cvCta: "Télécharger le CV",
     footer: "Tous droits réservés.",
   },
 
   en: {
     name: "Irenge Mihigo Karim",
     role: "Data Manager",
-    tagline: "Public health · Outbreak response · Information systems",
+    tagline: "Data · Monitoring & evaluation · Networks and information systems",
     nav: [
       ["Expertise", "expertise"],
       ["Career", "history"],
@@ -174,6 +202,24 @@ export const content = {
         text: "Risk maps by health area and spatial analysis to guide field teams in emergency and insecure settings.",
         tools: ["QGIS", "Risk mapping", "Epidemiological surveillance"],
       },
+      {
+        icon: "project",
+        title: "M&E and project management",
+        text: "Indicator monitoring, results evaluation and project management: planning, team coordination, activity follow-up and reporting to partners.",
+        tools: ["Monitoring & evaluation", "Logframe", "Indicators", "Planning", "Coordination"],
+      },
+      {
+        icon: "network",
+        title: "Networking & infrastructure",
+        text: "Designing, deploying and maintaining enterprise networks, troubleshooting connectivity and administering IT systems.",
+        tools: ["LAN / WAN", "Routing & switching", "Wi-Fi", "Cisco Packet Tracer", "Systems administration"],
+      },
+      {
+        icon: "code",
+        title: "Development & programming",
+        text: "Web applications and automation tools that make data collection, processing and presentation easier.",
+        tools: ["React", "Angular", "Python", "SQL", "C++"],
+      },
     ],
 
     historyTitle: "Career",
@@ -192,7 +238,7 @@ export const content = {
         title: "ICT Manager",
         org: "BDOM Bukavu",
         place: "South Kivu, DRC",
-        text: "IT infrastructure and networks; support to data management and the health information system (DHIS2); analytical reports for management.",
+        text: "Administered IT infrastructure and networks (LAN, Wi-Fi, connectivity); technical support; support to data management and the health information system (DHIS2); analytical reports for management.",
       },
       {
         type: "work",
@@ -247,6 +293,18 @@ export const content = {
         text: "Data collection forms with skip logic and validation, deployed offline, followed by analysis of results.",
         tools: ["KoboToolbox", "ODK"],
       },
+      {
+        icon: "network",
+        title: "BDOM network infrastructure",
+        text: "Maintained and troubleshot the network and IT equipment of a health organisation to keep teams reliably connected.",
+        tools: ["Networking", "IT support"],
+      },
+      {
+        icon: "chip",
+        title: "IoT waste monitoring system",
+        text: "Final-year project: sensors and Wi-Fi modules to track bin fill levels in real time, C++ firmware and MATLAB simulations.",
+        tools: ["IoT", "C++", "Arduino", "MATLAB"],
+      },
     ],
 
     languagesTitle: "Languages",
@@ -257,9 +315,8 @@ export const content = {
     ],
 
     contactTitle: "Contact",
-    contactText: "Open to information management, data and MEAL roles in the humanitarian sector, in the DRC and across Africa.",
+    contactText: "Open to information management, data, MEAL, project management and ICT roles in the humanitarian sector, in the DRC and across Africa.",
     emailCta: "Email me",
-    cvCta: "Download CV",
     footer: "All rights reserved.",
   },
 };

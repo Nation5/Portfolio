@@ -8,7 +8,7 @@ export default function Project({ t }) {
       <Reveal as="h2" className="section-title">{t.projectsTitle}</Reveal>
       <div className="projects-grid">
         {t.projects.map((p, i) => (
-          <Reveal as="article" className="project" key={p.title} delay={(i % 2) * 140}>
+          <Reveal as="article" className="project" key={p.title} delay={(i % 3) * 120}>
             <div className="project-thumb-wrap">
               {p.image ? (
                 <img src={p.image} alt="" className="project-thumb" />

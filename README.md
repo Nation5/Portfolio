@@ -11,11 +11,10 @@ npm run dev      # http://localhost:5173/
 
 ## Modifier le contenu
 Tout le texte est dans **`src/data/content.js`** (versions FR et EN) :
-- `contact` : e-mail, téléphone, LinkedIn, photo, CV
+- `contact` : e-mail, téléphone, LinkedIn, photo
 - `expertise`, `history` (parcours), `projects` (réalisations), `languages`
 
 Fichiers à placer dans `public/` :
-- `cv-irenge-mihigo-karim.pdf` → bouton « Télécharger le CV »
 - `photo.jpg` (optionnel) → puis `photo: \`${BASE}photo.jpg\`` dans `contact`
 - Pour illustrer une réalisation, ajoutez `image: \`${BASE}nom.png\`` à l'élément voulu.
 

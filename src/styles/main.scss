@@ -133,7 +133,7 @@ button { font: inherit; }
 }
 
 // Expertise
-.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 56px 48px; }
 .skill {
   .skill-icon { font-size: 2.6rem; color: var(--text); }
   h3 { font-size: 1.3rem; margin: 18px 0 8px; }
@@ -179,7 +179,7 @@ button { font: inherit; }
 .tl-date { font-size: .85rem; color: var(--muted); font-variant-numeric: tabular-nums; }
 
 // Réalisations
-.projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px 48px; }
+.projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 36px; }
 .project {
   h3 { margin: 18px 0 6px; font-size: 1.3rem; }
   p { margin: 0 0 12px; color: var(--muted); }
@@ -232,6 +232,10 @@ button { font: inherit; }
 }
 
 // ── Responsive ───────────────────────────
+@media (max-width: 1100px) {
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 900px) {
   .skills-grid { grid-template-columns: 1fr; gap: 40px; }
   .projects-grid, .contact-grid { grid-template-columns: 1fr; }

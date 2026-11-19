@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone, faLocationDot, faLinkedin, faFileArrowDown } from "./icons";
+import { faEnvelope, faPhone, faLocationDot, faLinkedin } from "./icons";
 import Reveal from "./Reveal";
 
 export default function Contact({ t, contact }) {
@@ -12,9 +12,6 @@ export default function Contact({ t, contact }) {
           <div className="actions">
             <a className="btn primary" href={`mailto:${contact.email}`}>
               <FontAwesomeIcon icon={faEnvelope} /> {t.emailCta}
-            </a>
-            <a className="btn" href={contact.cv} download>
-              <FontAwesomeIcon icon={faFileArrowDown} /> {t.cvCta}
             </a>
           </div>
         </Reveal>

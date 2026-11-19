@@ -1,5 +1,6 @@
 import {
   faDatabase, faChartLine, faMapLocationDot, faTableList, faMobileScreen,
+  faDiagramProject, faNetworkWired, faCode, faMicrochip,
   faBriefcase, faGraduationCap, faSun, faMoon, faBars, faXmark,
   faEnvelope, faPhone, faLocationDot, faFileArrowDown, faArrowDown,
 } from "@fortawesome/free-solid-svg-icons";
@@ -11,6 +12,10 @@ export const topicIcons = {
   map: faMapLocationDot,
   table: faTableList,
   mobile: faMobileScreen,
+  project: faDiagramProject,
+  network: faNetworkWired,
+  code: faCode,
+  chip: faMicrochip,
 };
 
 export {
