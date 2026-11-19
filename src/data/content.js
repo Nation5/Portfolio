@@ -11,7 +11,7 @@ export const contact = {
   linkedin: "https://www.linkedin.com/in/karimnation/",
   github: "https://github.com/Nation5",
   location: "Bunia, Ituri — RDC",
-  photo: null, // ex. `${BASE}photo.jpg` après avoir placé photo.jpg dans /public
+  photo: `${BASE}photo.jpg`, // fichier dans /public
   initials: "IK",
 };
 
