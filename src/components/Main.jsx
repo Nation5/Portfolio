@@ -25,8 +25,9 @@ export default function Main({ t, contact }) {
             {t.role}
             <span className="role-bar" />
           </p>
-          <p className="hero-tagline enter" style={{ "--d": "600ms" }}>{t.tagline}</p>
-          <p className="hero-intro enter" style={{ "--d": "680ms" }}>{t.intro}</p>
+          <p className="hero-intro enter" style={{ "--d": "600ms" }}>
+            {t.intro.map((part, i) => (typeof part === "string" ? part : <strong key={i}>{part.b}</strong>))}
+          </p>
           <div className="hero-actions enter" style={{ "--d": "750ms" }}>
             <button className="pill primary" onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}>
               <FontAwesomeIcon icon={faCalendarCheck} /> {t.book}

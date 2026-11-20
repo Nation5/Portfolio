@@ -594,5 +594,9 @@ $wa-dark: #1da851;
   .dot::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: #25d366; animation: wa-ping 2.4s ease-out 1.5s infinite; }
 }
 .socials { margin-top: 2px; }
-.hero-intro { margin: 14px 0 0; max-width: 58ch; color: var(--muted); font-size: 1.02rem; line-height: 1.6; }
+.hero-intro {
+  margin: 18px 0 0; max-width: 52ch;
+  font-size: 1.12rem; line-height: 1.7; color: var(--muted);
+  strong { color: var(--text); font-weight: 600; }
+}
 @media (prefers-reduced-motion: reduce) { .available .dot::after { animation: none; } }

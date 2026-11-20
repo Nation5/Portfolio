@@ -23,7 +23,7 @@ export const content = {
     name: "Nation5",
     role: "ICT Officer & Coach en IA",
     available: "Disponible pour des missions",
-    intro: "Je conçois des solutions numériques robustes — réseaux, applications web, tableaux de bord — et j'aide les équipes à tirer parti de l'IA pour gagner en productivité.",
+    intro: ["Je conçois des ", { b: "réseaux fiables" }, ", des ", { b: "applications web" }, " et des ", { b: "tableaux de bord" }, " sur mesure, et j'accompagne les équipes dans l'adoption de l'", { b: "intelligence artificielle" }, "."],
     tagline: "Réseaux et systèmes · Intelligence artificielle · Développement · Données · Gestion de projet",
     nav: [
       ["Expertise", "expertise"],
@@ -187,7 +187,7 @@ export const content = {
     name: "Nation5",
     role: "ICT Officer & AI Coach",
     available: "Available for freelance work",
-    intro: "I build robust digital solutions — networks, web applications, dashboards — and help teams leverage AI to boost productivity.",
+    intro: ["I design ", { b: "reliable networks" }, ", ", { b: "web applications" }, " and custom ", { b: "dashboards" }, ", and I help teams adopt ", { b: "artificial intelligence" }, "."],
     tagline: "Networks & systems · Artificial intelligence · Development · Data · Project management",
     nav: [
       ["Expertise", "expertise"],
