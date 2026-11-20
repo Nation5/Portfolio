@@ -13,6 +13,9 @@ export default function Main({ t, contact }) {
           {contact.photo ? <img src={contact.photo} alt={t.name} /> : <span>{contact.initials}</span>}
         </div>
         <div className="hero-content">
+          <span className="available enter" style={{ "--d": "150ms" }}>
+            <span className="dot" /> {t.available}
+          </span>
           <div className="socials enter" style={{ "--d": "200ms" }}>
             <a href={contact.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><FontAwesomeIcon icon={faLinkedin} /></a>
             <a href={contact.github} target="_blank" rel="noreferrer" aria-label="GitHub"><FontAwesomeIcon icon={faGithub} /></a>
@@ -23,6 +26,7 @@ export default function Main({ t, contact }) {
             <span className="role-bar" />
           </p>
           <p className="hero-tagline enter" style={{ "--d": "600ms" }}>{t.tagline}</p>
+          <p className="hero-intro enter" style={{ "--d": "680ms" }}>{t.intro}</p>
           <div className="hero-actions enter" style={{ "--d": "750ms" }}>
             <button className="pill primary" onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}>
               <FontAwesomeIcon icon={faCalendarCheck} /> {t.book}

@@ -583,3 +583,16 @@ $wa-dark: #1da851;
 @media (max-width: 640px) {
   .hero-actions .pill.wa { display: none; }
 }
+
+// Repris de l'ancien portfolio : badge de disponibilité + phrase d'accroche
+.available {
+  display: inline-flex; align-items: center; gap: 9px; margin-bottom: 14px;
+  padding: 6px 14px; border-radius: 999px; font-size: .85rem; font-weight: 600;
+  color: var(--text); background: color-mix(in srgb, var(--surface) 80%, transparent);
+  border: 1px solid color-mix(in srgb, #25d366 45%, var(--border));
+  .dot { position: relative; width: 8px; height: 8px; border-radius: 50%; background: #25d366; }
+  .dot::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: #25d366; animation: wa-ping 2.4s ease-out 1.5s infinite; }
+}
+.socials { margin-top: 2px; }
+.hero-intro { margin: 14px 0 0; max-width: 58ch; color: var(--muted); font-size: 1.02rem; line-height: 1.6; }
+@media (prefers-reduced-motion: reduce) { .available .dot::after { animation: none; } }

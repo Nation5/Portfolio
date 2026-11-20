@@ -22,6 +22,8 @@ export const content = {
   fr: {
     name: "Nation5",
     role: "ICT Officer & Coach en IA",
+    available: "Disponible pour des missions",
+    intro: "Je conçois des solutions numériques robustes — réseaux, applications web, tableaux de bord — et j'aide les équipes à tirer parti de l'IA pour gagner en productivité.",
     tagline: "Réseaux et systèmes · Intelligence artificielle · Développement · Données · Gestion de projet",
     nav: [
       ["Expertise", "expertise"],
@@ -47,7 +49,7 @@ export const content = {
       { icon: "network", name: "Réseaux & infrastructure", price: 30, featured: true,
         items: ["Audit et conception de réseau", "Installation LAN / Wi-Fi", "Dépannage et maintenance", "Administration systèmes"] },
       { icon: "code", name: "Développement web", price: 35, featured: false,
-        items: ["Sites et applications React / Angular", "Scripts et outils Python", "Tableaux de bord sur mesure", "Mise en ligne et suivi"] },
+        items: ["Sites et applications React / Angular / MERN", "Scripts et outils Python", "Tableaux de bord sur mesure", "Mise en ligne et suivi"] },
       { icon: "project", name: "Données, S&E et gestion de projet", price: 25, featured: false,
         items: ["Collecte Kobo / ODK et DHIS2", "Tableaux de bord Power BI", "Plans de suivi-évaluation", "Accompagnement de projet"] },
     ],
@@ -75,7 +77,7 @@ export const content = {
         icon: "code",
         title: "Développement et programmation",
         text: "Applications web et outils sur mesure pour automatiser les processus, collecter les données et les présenter clairement.",
-        tools: ["React", "Angular", "Python", "SQL", "C++"],
+        tools: ["React", "Angular", "TypeScript", "Node.js", "Express", "MongoDB", "Firebase", "Python", "Git"],
       },
       {
         icon: "database",
@@ -184,6 +186,8 @@ export const content = {
   en: {
     name: "Nation5",
     role: "ICT Officer & AI Coach",
+    available: "Available for freelance work",
+    intro: "I build robust digital solutions — networks, web applications, dashboards — and help teams leverage AI to boost productivity.",
     tagline: "Networks & systems · Artificial intelligence · Development · Data · Project management",
     nav: [
       ["Expertise", "expertise"],
@@ -209,7 +213,7 @@ export const content = {
       { icon: "network", name: "Networking & infrastructure", price: 30, featured: true,
         items: ["Network audit and design", "LAN / Wi-Fi installation", "Troubleshooting and maintenance", "Systems administration"] },
       { icon: "code", name: "Web development", price: 35, featured: false,
-        items: ["React / Angular websites and apps", "Python scripts and tools", "Custom dashboards", "Deployment and support"] },
+        items: ["React / Angular / MERN websites and apps", "Python scripts and tools", "Custom dashboards", "Deployment and support"] },
       { icon: "project", name: "Data, M&E and project management", price: 25, featured: false,
         items: ["Kobo / ODK and DHIS2 data collection", "Power BI dashboards", "M&E plans", "Project support"] },
     ],
@@ -237,7 +241,7 @@ export const content = {
         icon: "code",
         title: "Development & programming",
         text: "Web applications and custom tools that automate processes, collect data and present it clearly.",
-        tools: ["React", "Angular", "Python", "SQL", "C++"],
+        tools: ["React", "Angular", "TypeScript", "Node.js", "Express", "MongoDB", "Firebase", "Python", "Git"],
       },
       {
         icon: "database",
