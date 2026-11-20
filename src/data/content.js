@@ -23,7 +23,7 @@ export const content = {
     name: "Nation5",
     role: "ICT Officer & Coach en IA",
     available: "Disponible pour des missions",
-    intro: ["Je conçois des ", { b: "réseaux fiables" }, ", des ", { b: "applications web" }, " et des ", { b: "tableaux de bord" }, " sur mesure, et j'accompagne les équipes dans l'adoption de l'", { b: "intelligence artificielle" }, "."],
+    intro: ["Je conçois des ", { b: "réseaux fiables" }, ", des ", { b: "applications web" }, ", des ", { b: "tableaux de bord sur mesure" }, " et j'accompagne les équipes dans l'adoption de l'", { b: "intelligence artificielle" }, "."],
     tagline: "Réseaux et systèmes · Intelligence artificielle · Développement · Données · Gestion de projet",
     nav: [
       ["Expertise", "expertise"],
@@ -111,6 +111,19 @@ export const content = {
       },
     ],
 
+    featuredLabel: "Projet phare",
+    featured: {
+      name: "SyntroGIS",
+      tagline: "Bibliothèque SIG légère pour React",
+      text: "SyntroGIS est une bibliothèque React légère pour les applications SIG. Elle intègre les fonctionnalités cartographiques, la gestion des données spatiales et la visualisation dans les applications React, avec un minimum de code.",
+      features: [
+        { icon: "map", label: "Intégration SIG simplifiée" },
+        { icon: "bolt", label: "Rendu cartographique en temps réel" },
+        { icon: "globe", label: "Prise en charge multirégion" },
+        { icon: "layers", label: "Architecture efficace et évolutive" },
+      ],
+      tools: ["React", "SIG", "Données spatiales", "Cartographie"],
+    },
     projectsTitle: "Réalisations",
     projectsNote: "Les données opérationnelles restent confidentielles ; les exemples sont présentés sans données nominatives.",
     projects: [
@@ -187,7 +200,7 @@ export const content = {
     name: "Nation5",
     role: "ICT Officer & AI Coach",
     available: "Available for freelance work",
-    intro: ["I design ", { b: "reliable networks" }, ", ", { b: "web applications" }, " and custom ", { b: "dashboards" }, ", and I help teams adopt ", { b: "artificial intelligence" }, "."],
+    intro: ["I design ", { b: "reliable networks" }, ", ", { b: "web applications" }, ", ", { b: "custom dashboards" }, " and I help teams adopt ", { b: "artificial intelligence" }, "."],
     tagline: "Networks & systems · Artificial intelligence · Development · Data · Project management",
     nav: [
       ["Expertise", "expertise"],
@@ -275,6 +288,19 @@ export const content = {
       },
     ],
 
+    featuredLabel: "Featured project",
+    featured: {
+      name: "SyntroGIS",
+      tagline: "Lightweight GIS for React",
+      text: "SyntroGIS is a lightweight React library for GIS applications. It integrates map functionalities, spatial data handling and visualizations into React apps with minimal boilerplate.",
+      features: [
+        { icon: "map", label: "Easy GIS integration" },
+        { icon: "bolt", label: "Real-time map rendering" },
+        { icon: "globe", label: "Multi-region support" },
+        { icon: "layers", label: "Efficient and scalable architecture" },
+      ],
+      tools: ["React", "GIS", "Spatial data", "Mapping"],
+    },
     projectsTitle: "Selected work",
     projectsNote: "Operational data remains confidential; examples are described without personal data.",
     projects: [
